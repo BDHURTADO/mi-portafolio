@@ -1,12 +1,9 @@
 ---
-const { title, description, link } = Astro.props;
-
+// src/components/ProjectCard.astro
+const { title, description, url } = Astro.props;
 ---
-
 <article class="project-card">
-    <h3>{title}</h3>
-    <p>{description}</p>
-    <a href={link} target="_blank" rel="noopener noreferrer">
-        Ver Proyecto
-    </a>
+  <h3>{title}</h3>
+  <p>{description}</p>
+  <a href={url} target="_blank" rel="noopener noreferrer">Ver Proyecto</a>
 </article>

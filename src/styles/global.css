@@ -52,7 +52,22 @@ header h1 {
 h1, h2, h3 {
   color: var(--text-color);
   line-height: 1.2;
+  text-align: center;
 }
+#proyectos {
+  text-align: center;
+}
+
+#proyectos h2 {
+  margin-bottom: 2rem;
+}
+
+.project-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 section {
   padding: 3rem 1rem;
@@ -66,17 +81,19 @@ section {
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
+  margin-top: 20px;
 }
 
 .project-card {
   background-color: var(--card-bg);
   border: 1px solid var(--border-color);
-  border-radius: 8px;
+  border-radius: 9px;
   padding: 1.5rem;
   width: 100%;
   max-width: 350px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  
 }
 
 .project-card:hover {
@@ -102,7 +119,7 @@ footer {
   padding: 1rem 0;
   background-color: var(--color-secondary);
   color: var(--text-color);
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 .project-card a {
   display: inline-block;
@@ -111,7 +128,7 @@ footer {
   background-color: var(--color-primary);
   color: white;
   text-decoration: none; /* Elimina el subrayado del enlace */
-  border-radius: 4px; /* Agrega bordes redondeados */
+  border-radius: 1999px; /* Agrega bordes redondeados */
   transition: background-color 0.3s ease; /* Transición suave al pasar el mouse */
 }
 
@@ -397,4 +414,25 @@ footer {
     .theme-switcher {
         display: none;
     }
+}
+
+
+/* Media query para ocultarlo en móviles si es necesario */
+@media (max-width: 768px) {
+    .translator {
+        display: none;
+    }
+}
+.logo-photo.enlarged {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(4); /* Aumenta el tamaño a 220% */
+    z-index: 1000;
+    cursor: zoom-out;
+    max-width: 130%; /* Aumenta el ancho máximo para una imagen más grande */
+    max-height: 130vh; /* Aumenta la altura máxima */
+    border: 5px solid white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }

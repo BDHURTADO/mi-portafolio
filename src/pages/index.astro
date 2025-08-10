@@ -1,23 +1,22 @@
 ---
 import '../styles/global.css';
 import ProjectCard from '../components/ProjectCard.astro';
-
 ---
 
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>PORTAFOLIO BRAHIAN DANILO HURTADO</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-  </head>
-  <body>
- <header>
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="generator" content={Astro.generator} />
+  <title>PORTAFOLIO BRAHIAN DANILO HURTADO</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+</head>
+<body>
+<header>
   <nav class="navbar">
     <div class="header-content">
-      <img src="/foto.png" alt="Logo de [brahian danilo hurtado muñoz]" class="logo-photo" />
+      <img id="my-photo" src="/foto.png" alt="Logo de brahian danilo hurtado muñoz" class="logo-photo" />
       <h1>brahian danilo hurtado muñoz</h1>
     </div>
     <ul class="nav-links">
@@ -26,129 +25,108 @@ import ProjectCard from '../components/ProjectCard.astro';
       <li><a href="#contacto">Contacto</a></li>
     </ul>
     <div class="theme-switcher">
-      <button id="theme-toggle" aria-label="Cambiar tema">
-        </button>
+      <button id="theme-toggle" aria-label="Cambiar tema"></button>
     </div>
-
-
-
     <button class="menu-toggle" aria-label="Abrir menú de navegación">
       <div class="hamburger"></div>
     </button>
   </nav>
 </header>
-
-    <main>
-      <section id="sobre-mi" data-aos="fade-up" data-aos-duration="1000">
-          <h2>un poco sobre Mí</h2>
-          <p>SSoy un estudiante de Ingeniería apasionado por la programación, la tecnología y la ciberseguridad. Mi curiosidad y dedicación me han llevado a desarrollar diversos proyectos de software, consolidando mis habilidades prácticas en lenguajes como JavaScript, HTML5, CSS3 y TypeScript.
-            Para el desarrollo de mis proyectos, he utilizado herramientas clave como React para la construcción de interfaces de usuario, Vite para optimizar el entorno de desarrollo y empaquetado, y he manejado el control de versiones con Git y GitHub. Además, tengo experiencia en la integración de APIs RESTful para obtener datos dinámicos.
-            Como Técnico en Sistemas, poseo una base sólida en el manejo de herramientas de seguridad informática y una comprensión profunda de la infraestructura tecnológica. Estoy familiarizado con varios lenguajes de programación, incluyendo algunos de los más demandados en la industria como Python, Java y Go.
-            Mi objetivo es aplicar mis conocimientos y mi entusiasmo para contribuir en proyectos innovadores, siempre buscando crecer y evolucionar en el mundo de la tecnología.
-                  </section>
-
-      
-        <section id="proyectos" data-aos="fade-up" data-aos-duration="1000">
-            <h2>Buscador del Clima (Weather App)</h2>
-            <div class="project-container">
-                <ProjectCard
-                    title="Buscador de Clima"
-                    description= "Una aplicación web interactiva que muestra el clima en tiempo real de cualquier ciudad. El usuario puede buscar una ubicación y obtener información detallada como la temperatura, humedad y velocidad del viento. El diseño es responsivo para una excelente experiencia en cualquier dispositivo."
-                    link="https://github.com/BDHURTADO/weather-app-project.git"
-                    link="https://weather-app-project-two-mocha.vercel.app/"
-                />
-            </div>
-        </section>
-
-        <section id="contacto" data-aos="fade-up" data-aos-duration="1000">
-          <h2>CONTACTO</h2>
-          <p>Estoy abierto a nuevas oportunidades, colaboraciones y proyectos interesantes. ¡No dudes en ponerte en contacto!</p>
-          <div class="contacto-container">
-          <div class="contacto-info">
-            <div class="info-item">
-            <i class="fa fa-envelope"></i>
-            <p><a href="mailto:brahianhurtado800">brahianhurtado800@gmail.com</a></p>
-            </div>
-            <div class="info-item">
-            <i class="fa fa-phone"></i>
-            <p><a href="tel:+573235901888">+57 3235901888</a></p>
-            </div>
-            <div class="info-item">
-            <i class="fa fa-linkedin"></i>
-            <p><a href="https://www.linkedin.com/in/bdhurtado13" target="_blank" rel="noopener noreferrer">Mi perfil de LinkedIn</a></p>
-            </div>
-            <div class="info-item">
-            <i class="fa fa-github"></i>
-            <p><a href="https://github.com/BDHURTADO" target="_blank" rel="noopener noreferrer">Mi GitHub</a></p>
-            </div>
+<main>
+  <section id="sobre-mi">
+    <h2>un poco sobre Mí</h2>
+    <p>Soy un estudiante de Ingeniería apasionado por la programación, la tecnología y la ciberseguridad. Mi curiosidad y dedicación me han llevado a desarrollar diversos proyectos de software, consolidando mis habilidades prácticas en lenguajes como JavaScript, HTML5, CSS3 y TypeScript.
+      Para el desarrollo de mis proyectos, he utilizado herramientas clave como React para la construcción de interfaces de usuario, Vite para optimizar el entorno de desarrollo y empaquetado, y he manejado el control de versiones con Git y GitHub. Además, tengo experiencia en la integración de APIs RESTful para obtener datos dinámicos.
+      Como Técnico en Sistemas, poseo una base sólida en el manejo de herramientas de seguridad informática y una comprensión profunda de la infraestructura tecnológica. Estoy familiarizado con varios lenguajes de programación, incluyendo algunos de los más demandados en la industria como Python, Java y Go.
+      Mi objetivo es aplicar mis conocimientos y mi entusiasmo para contribuir en proyectos innovadores, siempre buscando crecer y evolucionar en el mundo de la tecnología.
+    </p>
+  </section>
+  <section id="proyectos">
+    <h2>Buscador del Clima (Weather App)</h2>
+    <div class="project-container">
+      <ProjectCard
+        title="Buscador de Clima"
+        description="Una aplicación web interactiva que muestra el clima en tiempo real de cualquier ciudad. El usuario puede buscar una ubicación y obtener información detallada como la temperatura, humedad y velocidad del viento. El diseño es responsivo para una excelente experiencia en cualquier dispositivo."
+        link="https://weather-app-project-two-mocha.vercel.app/"
+      />
+    </div>
+  </section>
+  <section id="contacto">
+    <h2>CONTACTO</h2>
+    <p>Estoy abierto a nuevas oportunidades, colaboraciones y proyectos interesantes. ¡No dudes en ponerte en contacto!</p>
+    <div class="contacto-container">
+      <div class="contacto-info">
+        <div class="info-item">
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:brahianhurtado800">brahianhurtado800@gmail.com</a></p>
+        </div>
+        <div class="info-item">
+          <i class="fa fa-phone"></i>
+          <p><a href="tel:+573235901888">+57 3235901888</a></p>
+        </div>
+        <div class="info-item">
+          <i class="fa fa-linkedin"></i>
+          <p><a href="https://www.linkedin.com/in/bdhurtado13" target="_blank" rel="noopener noreferrer">Mi perfil de LinkedIn</a></p>
+        </div>
+        <div class="info-item">
+          <i class="fa fa-github"></i>
+          <p><a href="https://github.com/BDHURTADO" target="_blank" rel="noopener noreferrer">Mi GitHub</a></p>
+        </div>
+      </div>
+      <div class="contacto-form">
+        <h3>O envíame un mensaje directamente:</h3>
+        <form action="https://formspree.io/f/xzzvkyzv" method="POST">
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required>
           </div>
-          <div class="contacto-form">
-            <h3>O envíame un mensaje directamente:</h3>
-            <form action="https://formspree.io/f/xzzvkyzv" method="POST">
-            <div class="form-group">
-              <label for="nombre">Nombre</label>
-              <input type="text" id="nombre" name="nombre" required>
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-              <label for="mensaje">Mensaje</label>
-              <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn-primary">Enviar Mensaje</button>
-            </form>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
           </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
           </div>
-      </section>
-    </main>
+          <button type="submit" class="btn-primary">Enviar Mensaje</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <p>Derechos de autor &copy; 2024</p>
+</footer>
+<script type="text/javascript">
+  const root = document.documentElement;
+  const storedTheme = localStorage.getItem('theme');
+  if (storedTheme === 'light-mode') {
+    root.classList.add('light-mode');
+  }
 
-    <footer>
-      <p>Derechos de autor &copy; 2024</p>
-    </footer>
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const themeToggle = document.getElementById('theme-toggle');
+    const myPhoto = document.getElementById('my-photo');
 
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
 
+    themeToggle.addEventListener('click', () => {
+      root.classList.toggle('light-mode');
+      if (root.classList.contains('light-mode')) {
+        localStorage.setItem('theme', 'light-mode');
+      } else {
+        localStorage.setItem('theme', 'dark-mode');
+      }
+    });
 
-
-      <script>
-       import AOS from 'aos';
-       import 'aos/dist/aos.css';
-
-
-        document.addEventListener('DOMContentLoaded', () => {
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
-        const themeToggle = document.getElementById('theme-toggle');
-
-        menuToggle.addEventListener('click', () => {
-          navLinks.classList.toggle('active');
-        });
-
-        
-        const root = document.documentElement;
-
-        
-        const storedTheme = localStorage.getItem('theme');
-        if (storedTheme === 'light-mode') {
-          root.classList.add('light-mode');
-        }
-
-        
-        themeToggle.addEventListener('click', () => {
-          
-          root.classList.toggle('light-mode');
-
-          
-          if (root.classList.contains('light-mode')) {
-            localStorage.setItem('theme', 'light-mode');
-          } else {
-            localStorage.setItem('theme', 'dark-mode');
-          }
-
-          AOS.init();
-        });
-      });
+    myPhoto.addEventListener('click', () => {
+      myPhoto.classList.toggle('enlarged');
+    });
+  });
 </script>
-  </body>
+</body>
 </html>
