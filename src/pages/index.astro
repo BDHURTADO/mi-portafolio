@@ -107,11 +107,20 @@ import ProjectCard from '../components/ProjectCard.astro';
   document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
+    const navLinksA = document.querySelectorAll('.nav-links a');
     const themeToggle = document.getElementById('theme-toggle');
     const myPhoto = document.getElementById('my-photo');
 
     menuToggle.addEventListener('click', () => {
       navLinks.classList.toggle('active');
+    });
+
+    navLinksA.forEach(link => {
+      link.addEventListener('click', () => {
+        if (navLinks.classList.contains('active')) {
+          navLinks.classList.remove('active');
+        }
+      });
     });
 
     themeToggle.addEventListener('click', () => {

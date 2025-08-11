@@ -1,9 +1,54 @@
 ---
-// src/components/ProjectCard.astro
-const { title, description, url } = Astro.props;
+const { title, description, link } = Astro.props;
 ---
-<article class="project-card">
+<div class="project-card">
   <h3>{title}</h3>
   <p>{description}</p>
-  <a href={url} target="_blank" rel="noopener noreferrer">Ver Proyecto</a>
-</article>
+  <a href={link} target="_blank" rel="noopener noreferrer" class="project-link">Ver Proyecto</a>
+</div>
+
+<style>
+<style>
+  .project-card {
+    background-color: #2c3e50; /* Color de fondo oscuro */
+    border: 1px solid #34495e; /* Borde sutil */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 2rem; /* Espaciado interno */
+    text-align: center; /* Centra el contenido */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+    transition: transform 0.3s ease-in-out; /* Animación al pasar el mouse */
+    max-width: 400px; /* Ancho máximo de la tarjeta */
+    margin: 0 auto; /* Centra la tarjeta horizontalmente */
+  }
+
+  .project-card:hover {
+    transform: translateY(-5px); /* Efecto de "levantar" al pasar el mouse */
+  }
+
+  .project-card h3 {
+    color: #ecf0f1; /* Color del título */
+    margin-bottom: 0.5rem;
+  }
+
+  .project-card p {
+    color: #bdc3c7; /* Color del texto de la descripción */
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .project-link {
+    display: inline-block;
+    background-color: #3498db; /* Color del botón */
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px; /* Botón con forma redondeada */
+    text-decoration: none; /* Elimina el subrayado */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  .project-link:hover {
+    background-color: #2980b9; /* Color más oscuro al pasar el mouse */
+  }
+</style>
+</style>
